@@ -1,8 +1,10 @@
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #434455;
     background-color: #fff;
 }
+
+/* reset */
 
 ul,
 ol {
@@ -22,16 +24,10 @@ p {
 }
 
 a {
-    color: currentColor;
     text-decoration: none;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
+/* common */
 
 .container {
     max-width: 1158px;
@@ -39,10 +35,12 @@ img {
     margin: 0 auto;
 }
 
+/* header */
+
 .page-header {
     border-bottom: 1px solid #e7e9fc;
-    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
-    background: #fff;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+        0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -55,34 +53,8 @@ img {
     align-items: center;
 }
 
-.naw-list {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.contacts {
-    font-style: normal;
-    margin-left: auto;
-    gap: 40px;
-    display: flex;
-    align-items: center;
-}
-
-.contacts-lest {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.lest {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
 .logo {
-    font-family: "Raleway", sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
@@ -100,6 +72,16 @@ img {
     color: #2e2f42;
 }
 
+.footer-logo .logo-part {
+    color: #f4f4fd;
+}
+
+.new-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 .nav-link {
     display: block;
     padding: 24px 0;
@@ -108,7 +90,8 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    color: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link.current {
@@ -117,37 +100,47 @@ img {
 
 .nav-link.current::after {
     content: '';
+
     position: absolute;
     left: 0;
     bottom: -1px;
+
     width: 100%;
     height: 4px;
     border-radius: 2px;
+
     background-color: #404bbf;
 }
 
-.nav-link:hover,
-.nav-link:focus,
-.nav-link.current {
-    color: #404bbf;
+.contacts {
+    font-style: normal;
+    margin-left: auto;
+}
+
+.lest {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .contacts-link {
     display: block;
     padding: 24px 0;
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    transition: color 250ms cubic-bezier(0.4, 0.2, 1);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-lest:hover,
-.contacts-lest:focus {
+.nav-link:hover,
+.nav-link:focus,
+.contacts-link:hover,
+.contacts-link:focus,
+.nav-link.current {
     color: #404bbf;
 }
-
 
 .hero {
     padding-top: 188px;
